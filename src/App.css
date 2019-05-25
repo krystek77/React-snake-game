@@ -1,33 +1,116 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-wrap:nowrap;
+  justify-content: center;
+  align-items: center;
+  padding:2rem 2rem 0rem;
+  border:1px dotted #fbfcfc; 
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.game-board {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.dashboard {
+  width:30rem;
+  padding:2rem;
+  text-align: center;
+}
+.dashboard h2 {
+  text-transform: uppercase;
+  padding-bottom:1rem;
+  font-size: 1.5rem;
+  
+}
+.snake-logo {
+  font-size: 5rem;
+  line-height: 10rem;
+}
+.score {
+  margin-bottom:1rem;
+}
+.dashboard p {
+  font-size: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.reset-game,.try-again {
+  background-color:#9dd6f9;
+  border:1px solid #5eb6ef;
+  outline:none;
+  cursor:pointer;
+  padding:1rem 1.5rem;
+  color:#333333;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.reset-game:hover,.try-again:hover{
+  background-color:#5eb6ef;
+  border:1px solid #9dd6f9;
+  color: #333333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.game-board h1 {
+  text-transform: uppercase;
+  padding-bottom:1.5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width:60rem;
+  height:60rem;
+  padding:2rem;
+  box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.3);
+}
+.cell {
+  width:3rem;
+  height:3rem;
+  outline:1px solid #00bb43;
+  background-color: #009b36;
+  flex-shrink: 0;
+  font-family: 'Open Sans Condensed',sans-serif;
+  text-align: center;
+  line-height: 3rem;
+  font-size: 1rem;
+  color:#b7e2fd;
+}
+.cell.apple {
+  background-color: red;
+}
+.cell.snake-head {
+  background-color: #19241a;
+}
+.cell.snake-tail {
+  background-color: #076326;
+}
+.tips {
+  min-height: 5rem;
+  padding:1rem;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 5rem;
+}
+.result-board {
+  width:100%;
+  height: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content: center;
+  background-color: #333333;
+}
+.result-board .game-over {
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: 'Days One',sans-serif;
+  color:#fbfcfc;
+  margin-bottom:1rem;
+}
+.result-board .game-pad{
+  font-size: 3.2rem;
+  margin-bottom:2rem;
 }
