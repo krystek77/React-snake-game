@@ -5,7 +5,7 @@ My first react game
 ## Control
 
 Move by the arrow keys on numpad
-left - a;
-up - w;
-right - d;
-down - s;
+left - 4;
+up - 8;
+right - 6;
+down - 2;
