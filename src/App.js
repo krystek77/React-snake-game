@@ -86,7 +86,7 @@ class App extends Component {
   }
   //
   setDirection = (event) => {
-    if(event.keyCode===52){
+    if(event.keyCode===65){
       // console.log("LEFT");
       const {snake:{velocity}} = this.state;
       if(velocity.col===1) return
@@ -101,7 +101,7 @@ class App extends Component {
           }
         };
       });
-    }else if(event.keyCode===56){
+    }else if(event.keyCode===85){
       
       // console.log("UP");
       const {snake:{velocity}} = this.state;
@@ -117,7 +117,7 @@ class App extends Component {
           }
         };
       });
-    }else if(event.keyCode===54){
+    }else if(event.keyCode===68){
       // console.log("RIGHT");
       const {snake:{velocity}} = this.state;
       if(velocity.col===-1) return;
@@ -132,7 +132,7 @@ class App extends Component {
           }
         };
       });
-    }else if(event.keyCode===50){
+    }else if(event.keyCode===83){
       // console.log("DOWN")
       const {snake:{velocity}} = this.state;
       if(velocity.row===-1) return;
